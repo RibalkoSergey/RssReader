@@ -18,6 +18,7 @@ import java.io.OutputStream;
 
 public class Utils {
     public static final String RSSFEEDURL = "http://k.img.com.ua/rss/ru/web.xml";
+
     public static boolean isNetworkAvailable(Context context) {
         Boolean result = false;
         ConnectivityManager conMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

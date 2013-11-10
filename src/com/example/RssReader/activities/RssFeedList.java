@@ -66,7 +66,6 @@ public class RssFeedList extends ActionBarActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            // Simulate something long running
             Parser myParser = new Parser();
             feed = myParser.parseXml(Utils.RSSFEEDURL);
             FragmentMainFeed frag = (FragmentMainFeed) getSupportFragmentManager().findFragmentById(R.id.list_frag);

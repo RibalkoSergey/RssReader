@@ -29,7 +29,6 @@ public class DetailActivity extends FragmentActivity {
     }
 
     private void initFields() {
-        //url = (TextView) getSupportFragmentManager().findFragmentById(R.id.details_frag).getView().findViewById(R.id.url);
         webContent = (WebView) getSupportFragmentManager().findFragmentById(R.id.details_frag).getView().findViewById(R.id.webContent);
     }
 

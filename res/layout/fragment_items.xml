@@ -9,11 +9,5 @@
         >
     <ListView
             android:id="@+id/rssList"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity="start"
-            android:choiceMode="singleChoice"
-            android:divider="@android:color/black"
-            android:dividerHeight="1dp"
-            android:background="@android:color/background_light"/>
+            style="@style/ListView"/>
 </LinearLayout>

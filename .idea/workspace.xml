@@ -45,7 +45,7 @@
     <file path="/feed_list.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384099132573" ignored="false" />
     <file path="/strings.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384037063428" ignored="false" />
     <file path="/feed_item.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384113335537" ignored="false" />
-    <file path="/fragment_items.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384037613119" ignored="false" />
+    <file path="/fragment_items.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384126997329" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384115161348" ignored="false" />
     <file path="$PROJECT_DIR$/../HomeTask2/src/com/example/HomeTask2/fragments/FragmentListView.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384092132934" ignored="false" />
     <file path="/DetailActivity.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384097914737" ignored="false" />
@@ -54,6 +54,7 @@
     <file path="/details_activity.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384096275057" ignored="false" />
     <file path="/menu.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384117056616" ignored="false" />
     <file path="/progressbar.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384120948892" ignored="false" />
+    <file path="/styles.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384126943781" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,10 +116,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StartActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/StartActivity.java">
+      <file leaf-file-name="RssFeedList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="41" selection-start="2162" selection-end="2162" vertical-scroll-proportion="0.0">
+            <state line="52" column="16" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="12" selection-start="99" selection-end="99" vertical-scroll-proportion="-2.04">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/parser/helper/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="0" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,90 +148,70 @@
       <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="76" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
+            <state line="21" column="4" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RssFeedList.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java">
+      <file leaf-file-name="FileCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/loader/helper/FileCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="12" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.5427215">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/parser/helper/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="19" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+            <state line="13" column="13" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragmentManager.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/sdk/extras/android/support/v7/appcompat/libs/android-support-v4.jar!/android/support/v4/app/FragmentManager.class">
+      <file leaf-file-name="ImageLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/loader/helper/ImageLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="52" selection-start="658" selection-end="658" vertical-scroll-proportion="-7.6">
+            <state line="32" column="13" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragmentManagerImpl.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/sdk/extras/android/support/v7/appcompat/libs/android-support-v4.jar!/android/support/v4/app/FragmentManagerImpl.class">
+      <file leaf-file-name="MemoryCache.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/loader/helper/MemoryCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="43" selection-start="6720" selection-end="6720" vertical-scroll-proportion="-8.76">
+            <state line="17" column="13" selection-start="411" selection-end="411" vertical-scroll-proportion="0.29588607">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feed_list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/feed_list.xml">
+      <file leaf-file-name="fragment_items.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/fragment_items.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="31" selection-start="362" selection-end="371" vertical-scroll-proportion="-2.38">
+            <state line="11" column="35" selection-start="381" selection-end="381" vertical-scroll-proportion="-3.74">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomListAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/adapters/CustomListAdapter.java">
+      <file leaf-file-name="DetailActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="11" selection-start="733" selection-end="733" vertical-scroll-proportion="-9.52">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FragmentMainFeed.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentMainFeed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="10" selection-start="4754" selection-end="4754" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1864#2516#0" expanded="true" />
-                <element signature="e#2504#2505#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FragmentDetail.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="27" selection-start="403" selection-end="417" vertical-scroll-proportion="0.0">
+            <state line="31" column="8" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_details.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/fragment_details.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,10 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/RssReader/parser/helper/Parser.java" />
-        <option value="$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentDetail.java" />
-        <option value="$PROJECT_DIR$/res/layout/details_activity.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java" />
         <option value="$PROJECT_DIR$/res/layout-sw600dp/feed_list.xml" />
         <option value="$PROJECT_DIR$/res/layout/fragment_details.xml" />
         <option value="$PROJECT_DIR$/res/layout/feed_list.xml" />
@@ -236,11 +233,15 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/menu/menu.xml" />
         <option value="$PROJECT_DIR$/res/layout/progressbar.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/RssReader/Utils.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/StartActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/adapters/CustomListAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentMainFeed.java" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_items.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java" />
+        <option value="$PROJECT_DIR$/src/com/example/RssReader/parser/helper/Parser.java" />
+        <option value="$PROJECT_DIR$/src/com/example/RssReader/Utils.java" />
       </list>
     </option>
   </component>
@@ -312,6 +313,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RssReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RssReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RssReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RssReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -859,65 +882,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/loader/helper/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="17" selection-start="2759" selection-end="2759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/sdk/platforms/android-14/android.jar!/android/R.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="553" column="32" selection-start="39782" selection-end="39782" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/sdk/sources/android-14/android/view/MenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="513" column="20" selection-start="19830" selection-end="19830" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="47" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/progressbar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="-2.72">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="76" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/StartActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="41" selection-start="2162" selection-end="2162" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentDetail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="27" selection-start="403" selection-end="417" vertical-scroll-proportion="0.0">
@@ -941,23 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/feed_list.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="362" selection-end="371" vertical-scroll-proportion="-2.38">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/parser/helper/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="19" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/adapters/CustomListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="11" selection-start="733" selection-end="733" vertical-scroll-proportion="-9.52">
@@ -975,12 +922,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/feed_list.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="12" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.5427215">
+        <state line="7" column="31" selection-start="362" selection-end="371" vertical-scroll-proportion="-2.38">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_details.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="12" selection-start="99" selection-end="99" vertical-scroll-proportion="-2.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_items.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="35" selection-start="381" selection-end="381" vertical-scroll-proportion="-3.74">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="8" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="16" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/parser/helper/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="4" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/loader/helper/FileCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/loader/helper/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/loader/helper/MemoryCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="411" selection-end="411" vertical-scroll-proportion="0.29588607">
+          <folding />
         </state>
       </provider>
     </entry>
