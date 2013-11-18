@@ -1,9 +1,15 @@
 package com.example.RssReader.activities;
 
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.view.MenuItemCompat;
@@ -11,9 +17,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.example.RssReader.R;
 import com.example.RssReader.Utils;
+import com.example.RssReader.adapters.CustomListAdapter;
 import com.example.RssReader.fragments.FragmentMainFeed;
 import com.example.RssReader.parser.helper.Parser;
 import com.example.RssReader.rss.helper.RSSFeed;
+import com.example.RssReader.rss.helper.RSSItem;
+import com.example.RssReader.services.RssService;
+
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,11 +36,37 @@ import com.example.RssReader.rss.helper.RSSFeed;
 public class RssFeedList extends ActionBarActivity {
     private MenuItem menuItem;
     private RSSFeed feed;
+    private PendingIntent pi;
+    public final static String PARAM_PINTENT = "pendingIntent";
+    public final static String PARAM_FEED = "feed";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feed_list);
+
+        pi = createPendingResult(1, null, 0);
+        Intent intent = new Intent(this, RssService.class).putExtra(PARAM_PINTENT, pi);
+        startService(intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == 100) {
+            feed = (RSSFeed) data.getBundleExtra(PARAM_FEED).get("feed");
+            FragmentMainFeed fr = (FragmentMainFeed)getSupportFragmentManager().findFragmentById(R.id.list_frag);
+            fr.updateList(feed.getItemlist());
+        }
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Intent intent = new Intent(this, RssService.class);
+        stopService(intent);
     }
 
     @Override

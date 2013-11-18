@@ -3,6 +3,8 @@ package com.example.RssReader.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,7 +16,19 @@ import android.widget.*;
 import com.example.RssReader.R;
 import com.example.RssReader.activities.DetailActivity;
 import com.example.RssReader.adapters.CustomListAdapter;
+import com.example.RssReader.loader.helper.ImageLoader;
 import com.example.RssReader.rss.helper.RSSFeed;
+import com.example.RssReader.rss.helper.RSSItem;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,14 +39,15 @@ import com.example.RssReader.rss.helper.RSSFeed;
  */
 public class FragmentMainFeed extends Fragment {
     View v;
-    ListView rssItemList;
+    public ListView rssItemList;
     public RSSFeed feed;
     public String test = "111";
     Context context = getActivity();
-    CustomListAdapter rssFeedListAdapter;
+    public CustomListAdapter rssFeedListAdapter;
     FragmentDetail fragmentDetail;
     WebView webContent;
-    TextView url;
+    TextView fullTextV;
+    ImageView imgV;
     ProgressBar pd;
 
     public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +59,11 @@ public class FragmentMainFeed extends Fragment {
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_items, null);
         return v;
+    }
+
+    public void updateList(ArrayList<RSSItem> feed) {
+        rssFeedListAdapter = new CustomListAdapter(v.getContext(), feed);
+        rssItemList.setAdapter(rssFeedListAdapter);
     }
 
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -61,80 +81,60 @@ public class FragmentMainFeed extends Fragment {
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long arg3) {
                 String url = rssFeedListAdapter.getRSSItem(position).getRef();
-
+                String img = rssFeedListAdapter.getRSSItem(position).getImage();
+                String fullText = rssFeedListAdapter.getRSSItem(position).getFullText();
 
                 if (fragmentDetail != null && fragmentDetail.isInLayout()
                         && (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)) {
-                    setDetails(url);
+                    setDetails(img, fullText);
                 } else {
-                    createActionView(url);
+                    createActivity(img, fullText);
                 }
-                //createActivity(url);
             }
 
         });
-
-        if (fragmentDetail != null && fragmentDetail.isInLayout()) {
-            webContent.getSettings().setJavaScriptEnabled(true);
-            webContent.loadUrl(rssFeedListAdapter.getRSSItem(0).getRef());
-        }
-
     }
 
-    private void createActivity(String url) {
+    private void createActivity(String img, String fullText) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), DetailActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("url", url);
+        bundle.putString("img", img);
+        bundle.putString("fullText", fullText);
         intent.putExtras(bundle);
-        startActivity(intent);
-    }
-
-    private void createActionView(String url) {
-        Uri uri = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
     public void initElement() {
         fragmentDetail = (FragmentDetail) getFragmentManager().findFragmentById(R.id.details_frag);
         if (fragmentDetail != null) {
-            //url = (TextView) fragmentDetail.getView().findViewById(R.id.url);
-            webContent = (WebView) fragmentDetail.getView().findViewById(R.id.webContent);
-            pd = (ProgressBar) fragmentDetail.getView().findViewById(R.id.web_view_progress_bar);
-
+            fullTextV = (TextView) fragmentDetail.getView().findViewById(R.id.fullText);
+            imgV = (ImageView) fragmentDetail.getView().findViewById(R.id.imgDetail);
         }
     }
 
-    private void setDetails(String urlString) {
-        //url.setText(urlString);
-        webContent.getSettings().setJavaScriptEnabled(true);
-        webContent.loadUrl(urlString);
-//        webContent.setWebViewClient(new WebViewClient());
-//        webContent.setWebChromeClient(new WebChromeClient() {
-//            public void onProgressChanged(WebView view, int progress) {
-//                if(progress < 100 && pd.getVisibility() == ProgressBar.GONE){
-//                    webContent.setVisibility(WebView.GONE);
-//                    pd.setVisibility(ProgressBar.VISIBLE);
-//                }
-//                pd.setProgress(progress);
-//                if(progress == 100 && webContent.getVisibility() == WebView.GONE) {
-//                    pd.setVisibility(ProgressBar.GONE);
-//                    webContent.setVisibility(WebView.VISIBLE);
-//                }
-//            }
-//        });
+    private void setDetails(String img, String fullText) {
+        ImageLoader imageLoader = new ImageLoader(getActivity());
+        fullTextV.setText(fullText);
+        imageLoader.DisplayImage(img, imgV);
+//        URL url = null;
+//        try {
+//            url = new URL(img);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//        }
+//        Bitmap bmp = null;
+//        try {
+//            bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        imgV.setImageBitmap(bmp);
+
     }
 
     public void updateList(RSSFeed feed) {
         //CustomListAdapter rssFeedListAdapter2 = new CustomListAdapter(v.getContext(), feed.getItemlist());
         //rssItemList.setAdapter(rssFeedListAdapter2);
-    }
-
-    class ClassWebViewClient extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            return super.shouldOverrideUrlLoading(view, url);
-        }
     }
 }

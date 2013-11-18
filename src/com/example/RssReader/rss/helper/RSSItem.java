@@ -16,12 +16,14 @@ public class RSSItem implements Serializable {
     private String ref = null;
     private String date = null;
     private String image = null;
+    private String fullText = null;
 
-    public RSSItem(String title, String ref, String date, String image) {
+    public RSSItem(String title, String ref, String date, String image, String fullText) {
         this.title = title;
         this.ref = ref;
         this.date = date;
         this.image = image;
+        this.fullText = fullText;
     }
 
     public void setTitle(String title) {
@@ -54,5 +56,13 @@ public class RSSItem implements Serializable {
 
     public String getImage() {
         return image;
+    }
+
+    public String getFullText() {
+        return fullText;
+    }
+
+    public void setFullText(String fullText) {
+        this.fullText = fullText;
     }
 }

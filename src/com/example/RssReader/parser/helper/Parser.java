@@ -51,10 +51,10 @@ public class Parser {
                 String title = nchild.item(1).getFirstChild().getNodeValue();
                 String date = nchild.item(3).getFirstChild().getNodeValue();
                 String ref = nchild.item(13).getFirstChild().getNodeValue();
-                String image = nchild.item(11).getFirstChild().getNodeValue().replace("<img src=","").replace(">","").replace("\"", "");
-
+                String image = nchild.item(11).getFirstChild().getNodeValue().replace("<img align=\"left\" vspace=\"5\" hspace=\"10\" src=","").replace("\">","").replace("\"", "");
+                String fullText = nchild.item(7).getFirstChild().getNodeValue().replace("<p>","").replace("</p>","");
                 if (title != null) {
-                    RSSItem item = new RSSItem(title, date, ref, image);
+                    RSSItem item = new RSSItem(title, date, ref, image, fullText);
                     feed.addItem(item);
                 }
             }

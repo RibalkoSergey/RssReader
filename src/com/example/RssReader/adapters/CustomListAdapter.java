@@ -2,6 +2,8 @@ package com.example.RssReader.adapters;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,9 @@ import com.example.RssReader.R;
 import com.example.RssReader.loader.helper.ImageLoader;
 import com.example.RssReader.rss.helper.RSSItem;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -63,6 +68,19 @@ public class CustomListAdapter extends BaseAdapter {
         RSSItem item = getRSSItem(position);
 
         imageLoader.DisplayImage(item.getImage(), iv);
+//        URL url = null;
+//        try {
+//            url = new URL(item.getImage());
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//        }
+//        Bitmap bmp = null;
+//        try {
+//            bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        iv.setImageBitmap(bmp);
         tvTitle.setText(item.getTitle());
         tvDate.setText(item.getDate());
 
