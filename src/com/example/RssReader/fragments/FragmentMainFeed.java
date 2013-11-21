@@ -93,6 +93,11 @@ public class FragmentMainFeed extends Fragment {
             }
 
         });
+
+        if (fragmentDetail != null && fragmentDetail.isInLayout()
+                && (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)) {
+            setDetails(rssFeedListAdapter.getRSSItem(0).getImage(), rssFeedListAdapter.getRSSItem(0).getFullText());
+        }
     }
 
     private void createActivity(String img, String fullText) {
