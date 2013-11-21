@@ -3,8 +3,10 @@ package com.example.RssReader.activities;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v4.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -36,17 +38,32 @@ import java.util.ArrayList;
 public class RssFeedList extends ActionBarActivity {
     private MenuItem menuItem;
     private RSSFeed feed;
-    private PendingIntent pi;
+    //private PendingIntent pi;
+    BroadcastReceiver br;
     public final static String PARAM_PINTENT = "pendingIntent";
     public final static String PARAM_FEED = "feed";
+    public final static String BROADCAST_ACTION = "com.example.rssfeed";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feed_list);
 
-        pi = createPendingResult(1, null, 0);
-        Intent intent = new Intent(this, RssService.class).putExtra(PARAM_PINTENT, pi);
+        br = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                feed = (RSSFeed) intent.getBundleExtra(PARAM_FEED).get("feed");
+                FragmentMainFeed fr = (FragmentMainFeed)getSupportFragmentManager().findFragmentById(R.id.list_frag);
+                fr.updateList(feed.getItemlist());
+            }
+        };
+
+        IntentFilter intFilt = new IntentFilter(BROADCAST_ACTION);
+        registerReceiver(br, intFilt);
+
+        Utils.setFrequencyMin(this, 15);
+
+        Intent intent = new Intent(this, RssService.class);
         startService(intent);
     }
 
@@ -67,6 +84,7 @@ public class RssFeedList extends ActionBarActivity {
         super.onDestroy();
         Intent intent = new Intent(this, RssService.class);
         stopService(intent);
+        unregisterReceiver(br);
     }
 
     @Override

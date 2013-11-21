@@ -13,6 +13,7 @@ import android.support.v4.app.TaskStackBuilder;
 import android.widget.Toast;
 import com.example.RssReader.R;
 import com.example.RssReader.Utils;
+import com.example.RssReader.activities.PropertiesActivity;
 import com.example.RssReader.activities.RssFeedList;
 import com.example.RssReader.parser.helper.Parser;
 import com.example.RssReader.rss.helper.RSSFeed;
@@ -36,7 +37,7 @@ public class RssService extends Service {
     private long TIMER_START_DELAY = 10000L;
     private RSSFeed feed;
     private Parser myParser = new Parser();
-    private PendingIntent pi;
+    //private PendingIntent pi;
     public static NotificationManager notificationManager;
 
     @Override
@@ -48,33 +49,34 @@ public class RssService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        pi = intent.getParcelableExtra(RssFeedList.PARAM_PINTENT);
-        //Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
+        //pi = intent.getParcelableExtra(RssFeedList.PARAM_PINTENT);
+        Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
+        final Context context = this;
+        int deley = Utils.getFrequencyMin(this);
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 if(Utils.isNetworkAvailable(RssService.this)){
                     feed = myParser.parseXml(Utils.RSSFEEDURL);
-                    try {
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("feed", feed);
-                        Intent intent = new Intent().putExtra(RssFeedList.PARAM_FEED, bundle);
-                        pi.send(RssService.this, 100, intent);
-                        setLastDateUpdateFeed(feed.getItemlist().get(1).getDate());
-                    } catch (PendingIntent.CanceledException e) {
-                        e.printStackTrace();
-                    }
+                        Intent intent = new Intent(RssFeedList.BROADCAST_ACTION).putExtra(RssFeedList.PARAM_FEED, bundle);;
+                        //pi.send(RssService.this, 100, intent);
+                        sendBroadcast(intent);
+                        Utils.setLastDateUpdateFeed(context, feed.getItemlist().get(1).getDate().substring(5, 25));
                 }
             }
-        }, TIMER_START_DELAY, 3000000);
+        }, TIMER_START_DELAY, deley*1000*60);
 
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
-
+        timer.cancel();
+        notificationManager.cancel(0);
+        Toast.makeText(this, "service stopped", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -86,11 +88,11 @@ public class RssService extends Service {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(context)
                         .setOngoing(true)
-                        .setSmallIcon(R.drawable.rss_menu)
+                        .setSmallIcon(R.drawable.rss_notification)
                         .setContentTitle("Korespondent RSS is enabled.")
                         .setContentText("Korespondent RSS is enabled.");
 
-        Intent resultIntent = new Intent(context, RssFeedList.class);
+        Intent resultIntent = new Intent(context, PropertiesActivity.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
         stackBuilder.addNextIntent(resultIntent);
 
@@ -112,4 +114,6 @@ public class RssService extends Service {
         SharedPreferences prefs = this.getSharedPreferences("com.example.RssReader", Context.MODE_PRIVATE);
         prefs.edit().putString("lastDate", data.toString()).commit();
     }
+
+
 }

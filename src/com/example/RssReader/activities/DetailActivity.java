@@ -9,6 +9,7 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.RssReader.R;
+import com.example.RssReader.loader.helper.ImageLoader;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -26,11 +27,12 @@ public class DetailActivity extends FragmentActivity {
     TextView fullTextV;
     String fullText;
     String imgUrl;
-
+    ImageLoader imageLoader;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_activity);
+        imageLoader = new ImageLoader(this);
         initFields();
         getParametr();
         setParametr();
@@ -51,25 +53,11 @@ public class DetailActivity extends FragmentActivity {
     }
 
     private void setParametr() {
-        if (fullText != null) {
-            fullTextV.setText(fullText);
-        }
-        if (img != null) {
-            URL url = null;
-            try {
-                url = new URL(imgUrl);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-            Bitmap bmp = null;
-            try {
-                bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
-            img.setImageBitmap(bmp);
-        }
+        if (fullText != null)
+            fullTextV.setText(fullText);
+        if (img != null)
+            imageLoader.DisplayImage(imgUrl, img);
     }
 
 }

@@ -59,6 +59,8 @@ public class StartActivity extends Activity {
             Bundle bundle = new Bundle();
             bundle.putSerializable("feed", feed);
 
+            Utils.setLastDateUpdateFeed(context, feed.getItemlist().get(1).getDate().substring(5, 25));
+
             Intent intent = new Intent();
             intent.setClass(context, RssFeedList.class);
             intent.putExtras(bundle);

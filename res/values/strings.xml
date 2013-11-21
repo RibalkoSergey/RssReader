@@ -4,4 +4,12 @@
     <string name="title">RssReader</string>
     <string name="date">No date</string>
 
+    <string name="droup_down_title">Choose a country</string>
+
+    <string-array name="minutes">
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+    </string-array>
 </resources>

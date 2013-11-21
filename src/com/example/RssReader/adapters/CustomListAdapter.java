@@ -68,6 +68,8 @@ public class CustomListAdapter extends BaseAdapter {
         RSSItem item = getRSSItem(position);
 
         imageLoader.DisplayImage(item.getImage(), iv);
+
+        //iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
 //        URL url = null;
 //        try {
 //            url = new URL(item.getImage());
@@ -77,10 +79,16 @@ public class CustomListAdapter extends BaseAdapter {
 //        Bitmap bmp = null;
 //        try {
 //            bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-//        iv.setImageBitmap(bmp);
+//        int width=30;
+//        int height=30;
+//        Bitmap resizedbitmap=Bitmap.createScaledBitmap(bmp, width, height, true);
+//        iv.setImageBitmap(resizedbitmap);
+
+
         tvTitle.setText(item.getTitle());
         tvDate.setText(item.getDate());
 
