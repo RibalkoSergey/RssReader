@@ -1,6 +1,8 @@
 package com.example.RssReader.activities;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -32,10 +34,15 @@ public class DetailActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_activity);
-        imageLoader = new ImageLoader(this);
-        initFields();
-        getParametr();
-        setParametr();
+        if (savedInstanceState == null) {
+            imageLoader = new ImageLoader(this);
+            initFields();
+            getParametr();
+            setParametr();
+        } else {
+            finish();
+        }
+
     }
 
     private void initFields() {

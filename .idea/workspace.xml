@@ -31,7 +31,7 @@
     <ignored path="RssReader.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1383166809544" ignored="false" />
-    <file path="/fragment.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1385068873644" ignored="false" />
+    <file path="/fragment.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1385155365124" ignored="false" />
     <file path="/main.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384024135879" ignored="false" />
     <file path="/MyActivity.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384027905686" ignored="false" />
     <file path="/RSSFeed.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384038529723" ignored="false" />
@@ -43,7 +43,7 @@
     <file path="/Utils.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1385067623697" ignored="false" />
     <file path="/RssFeedList.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1385067988574" ignored="false" />
     <file path="/Dummy.txt" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384696217853" ignored="false" />
-    <file path="/FragmentMainFeed.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384787641026" ignored="false" />
+    <file path="/FragmentMainFeed.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1385152776348" ignored="false" />
     <file path="/CustomListAdapter.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384892339810" ignored="false" />
     <file path="/feed_list.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384099132573" ignored="false" />
     <file path="/strings.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1385064659823" ignored="false" />
@@ -51,7 +51,7 @@
     <file path="/fragment_items.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384126997329" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384986574418" ignored="false" />
     <file path="$PROJECT_DIR$/../HomeTask2/src/com/example/HomeTask2/fragments/FragmentListView.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384092132934" ignored="false" />
-    <file path="/DetailActivity.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384975429439" ignored="false" />
+    <file path="/DetailActivity.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1385155139533" ignored="false" />
     <file path="/FragmentDetail.java" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384096110371" ignored="false" />
     <file path="/fragment_details.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384692009188" ignored="false" />
     <file path="/details_activity.xml" changelist="7c3f83c2-c87b-4017-a487-dc4ff7d7cb85" time="1384096275057" ignored="false" />
@@ -77,7 +77,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -114,7 +114,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -127,7 +127,7 @@
       <file leaf-file-name="RssFeedList.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.0">
+            <state line="50" column="0" selection-start="1686" selection-end="1730" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#1744#2132#0" expanded="true" />
                 <element signature="e#2121#2122#0" expanded="true" />
@@ -139,7 +139,7 @@
       <file leaf-file-name="DetailActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
+            <state line="42" column="21" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,19 +148,19 @@
       <file leaf-file-name="FragmentMainFeed.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentMainFeed.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="99" selection-start="3601" selection-end="3601" vertical-scroll-proportion="0.76384366">
-              <folding />
+            <state line="66" column="9" selection-start="2059" selection-end="2059" vertical-scroll-proportion="-2.165272">
+              <folding>
+                <element signature="e#2523#3323#0" expanded="true" />
+                <element signature="e#3311#3312#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="properties_activity.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/properties_activity.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="FragmentDetail.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="31" selection-start="1440" selection-end="1440" vertical-scroll-proportion="-3.86">
+            <state line="11" column="16" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,11 +169,8 @@
       <file leaf-file-name="RssService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/services/RssService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1857#2565#0" expanded="true" />
-                <element signature="e#2554#2555#0" expanded="true" />
-              </folding>
+            <state line="82" column="50" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -181,11 +178,8 @@
       <file leaf-file-name="PropertiesActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/PropertiesActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="758" selection-end="758" vertical-scroll-proportion="2.64">
-              <folding>
-                <element signature="e#1374#1848#0" expanded="true" />
-                <element signature="e#1837#1838#0" expanded="true" />
-              </folding>
+            <state line="27" column="0" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,7 +205,7 @@
       <file leaf-file-name="StartActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/StartActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="27" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.0">
+            <state line="66" column="35" selection-start="2014" selection-end="2173" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -241,7 +235,6 @@
         <option value="$PROJECT_DIR$/res/layout/fragment_details.xml" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/adapters/CustomListAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/loader/helper/ImageLoader.java" />
-        <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/StartActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/feed_item.xml" />
@@ -249,9 +242,10 @@
         <option value="$PROJECT_DIR$/res/layout/properties_activity.xml" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/Utils.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java" />
-        <option value="$PROJECT_DIR$/src/com/example/RssReader/services/RssService.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/PropertiesActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/RssReader/services/RssService.java" />
         <option value="$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentMainFeed.java" />
+        <option value="$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java" />
       </list>
     </option>
   </component>
@@ -289,6 +283,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -483,8 +479,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,8 +495,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
   </component>
   <component name="RecentsManager">
@@ -554,6 +548,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -580,19 +587,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -701,7 +695,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -709,7 +703,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23760092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39446366" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -723,7 +717,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21725826" sideWeight="0.7623991" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21725826" sideWeight="0.60553634" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.83506346" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -799,34 +793,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/progressbar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_items.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_details.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="51" selection-start="425" selection-end="590" vertical-scroll-proportion="-4.42">
-          <folding />
-        </state>
+        <state line="13" column="51" selection-start="425" selection-end="590" vertical-scroll-proportion="-4.42" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -841,9 +813,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="575" selection-end="575" vertical-scroll-proportion="1.7">
-          <folding />
-        </state>
+        <state line="16" column="33" selection-start="575" selection-end="575" vertical-scroll-proportion="1.7" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
@@ -858,14 +828,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="1440" selection-end="1440" vertical-scroll-proportion="-3.86">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/StartActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="27" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.0">
+        <state line="34" column="31" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -874,23 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="362" column="19" selection-start="9537" selection-end="9537" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/services/RssService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1857#2565#0" expanded="true" />
-            <element signature="e#2554#2555#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -903,11 +849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/PropertiesActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="758" selection-end="758" vertical-scroll-proportion="2.64">
-          <folding>
-            <element signature="e#1374#1848#0" expanded="true" />
-            <element signature="e#1837#1838#0" expanded="true" />
-          </folding>
+        <state line="27" column="0" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -918,9 +861,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-sw600dp-land/feed_list.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/services/RssService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="50" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/StartActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="35" selection-start="2014" selection-end="2173" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/DetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="21" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/activities/RssFeedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.0">
+        <state line="50" column="0" selection-start="1686" selection-end="1730" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#1744#2132#0" expanded="true" />
             <element signature="e#2121#2122#0" expanded="true" />
@@ -930,8 +911,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/RssReader/fragments/FragmentMainFeed.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="99" selection-start="3601" selection-end="3601" vertical-scroll-proportion="0.76384366">
-          <folding />
+        <state line="66" column="9" selection-start="2059" selection-end="2059" vertical-scroll-proportion="-2.165272">
+          <folding>
+            <element signature="e#2523#3323#0" expanded="true" />
+            <element signature="e#3311#3312#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -50,7 +50,7 @@ public class RssService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         //pi = intent.getParcelableExtra(RssFeedList.PARAM_PINTENT);
-        Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
         final Context context = this;
         int deley = Utils.getFrequencyMin(this);
 
@@ -76,7 +76,7 @@ public class RssService extends Service {
     public void onDestroy() {
         timer.cancel();
         notificationManager.cancel(0);
-        Toast.makeText(this, "service stopped", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "service stopped", Toast.LENGTH_SHORT).show();
     }
 
     @Override

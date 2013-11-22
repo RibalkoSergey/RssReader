@@ -111,10 +111,14 @@ public class FragmentMainFeed extends Fragment {
     }
 
     public void initElement() {
-        fragmentDetail = (FragmentDetail) getFragmentManager().findFragmentById(R.id.details_frag);
-        if (fragmentDetail != null) {
-            fullTextV = (TextView) fragmentDetail.getView().findViewById(R.id.fullText);
-            imgV = (ImageView) fragmentDetail.getView().findViewById(R.id.imgDetail);
+        //fragmentDetail = (FragmentDetail) getFragmentManager().findFragmentById(R.id.details_frag);
+        //if (fragmentDetail != null) {
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            fragmentDetail = (FragmentDetail) getFragmentManager().findFragmentById(R.id.details_frag);
+            if (fragmentDetail != null) {
+                fullTextV = (TextView) fragmentDetail.getView().findViewById(R.id.fullText);
+                imgV = (ImageView) fragmentDetail.getView().findViewById(R.id.imgDetail);
+            }
         }
     }
 
