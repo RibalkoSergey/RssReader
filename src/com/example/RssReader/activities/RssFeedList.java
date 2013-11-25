@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import com.example.RssReader.R;
 import com.example.RssReader.Utils;
 import com.example.RssReader.adapters.CustomListAdapter;
+import com.example.RssReader.content.provider.ContentProviderHelper;
 import com.example.RssReader.fragments.FragmentMainFeed;
 import com.example.RssReader.parser.helper.Parser;
 import com.example.RssReader.rss.helper.RSSFeed;
@@ -48,7 +49,6 @@ public class RssFeedList extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feed_list);
-
         br = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -103,14 +103,22 @@ public class RssFeedList extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.update:
-                menuItem = item;
-                MenuItemCompat.setActionView(menuItem, R.layout.progressbar);
-                //menuItem.setActionView(R.layout.progressbar);
-                MenuItemCompat.expandActionView(menuItem);
-                //menuItem.expandActionView();
-                TestTask task = new TestTask();
-                task.execute("test");
+
+                FragmentMainFeed fr1 = (FragmentMainFeed)getSupportFragmentManager().findFragmentById(R.id.list_frag);
+                fr1.updateList((RSSFeed) getIntent().getExtras().get("feed"));
+
+//                menuItem = item;
+//                MenuItemCompat.setActionView(menuItem, R.layout.progressbar);
+//                //menuItem.setActionView(R.layout.progressbar);
+//                MenuItemCompat.expandActionView(menuItem);
+//                //menuItem.expandActionView();
+//                TestTask task = new TestTask();
+//                task.execute("test");
                 break;
+            case R.id.list:
+                ArrayList<RSSItem> list = ContentProviderHelper.getFavouriteList(this);
+                FragmentMainFeed fr = (FragmentMainFeed)getSupportFragmentManager().findFragmentById(R.id.list_frag);
+                fr.updateList(list);
             default:
                 break;
         }

@@ -3,16 +3,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-            android:id="@+id/list"
-            android:icon="@drawable/list"
+            android:id="@+id/addToFavourite"
+            android:icon="@drawable/star"
             app:showAsAction="always"
             android:title="articles">
     </item>
-    <item
-            android:id="@+id/update"
-            android:icon="@drawable/refresh"
-            app:showAsAction="always"
-            android:title="update">
-    </item>
-
 </menu>

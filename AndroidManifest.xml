@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.DetailActivity"
-                  android:label="DetailActivity">
+                  android:label="DetailActivity"
+                  android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -38,6 +39,10 @@
             </intent-filter>
         </activity>
         <service android:name=".services.RssService" />
+        <provider
+                android:authorities="com.example.providers.rssreader"
+                android:name=".content.provider.RssContentProvider" >
+        </provider>
     </application>
 
 </manifest>

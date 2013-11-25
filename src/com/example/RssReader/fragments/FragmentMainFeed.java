@@ -83,12 +83,13 @@ public class FragmentMainFeed extends Fragment {
                 String url = rssFeedListAdapter.getRSSItem(position).getRef();
                 String img = rssFeedListAdapter.getRSSItem(position).getImage();
                 String fullText = rssFeedListAdapter.getRSSItem(position).getFullText();
+                String descrArticle = rssFeedListAdapter.getRSSItem(position).getTitle();
 
                 if (fragmentDetail != null && fragmentDetail.isInLayout()
                         && (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)) {
                     setDetails(img, fullText);
                 } else {
-                    createActivity(img, fullText);
+                    createActivity(img, fullText, descrArticle);
                 }
             }
 
@@ -100,12 +101,13 @@ public class FragmentMainFeed extends Fragment {
         }
     }
 
-    private void createActivity(String img, String fullText) {
+    private void createActivity(String img, String fullText, String descrArticle) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), DetailActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("img", img);
         bundle.putString("fullText", fullText);
+        bundle.putString("descrArticle", descrArticle);
         intent.putExtras(bundle);
         startActivity(intent);
     }
